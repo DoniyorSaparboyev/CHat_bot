@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ChatBot</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <button id="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <div class="chatbot-popup">
+        <!--ChatBot Header-->
+        <div class="chatbot-header">
+            <div class="header-info">
+                <img class="chatbot-logo" src="./logo.jpg" alt="logo" width="50" height="50">
+                <h2 class="logo-text">ChatBot</h2>
+            </div>
+            <button id="close-chatbot" class="material-symbols-outlined">keyboard_arrow_down</button>
+        </div>
+        <!--ChatBot Body-->
+        <div class="chatbot-body">
+            <div class="message bot-message">
+                <img class="bot-avatar" src="./logo.jpg" alt="logo" width="50" height="50">
+                <div class="message-text">Hey there. How can I help you?</div>
+            </div>
+        </div>
+        <!--ChatBot Footer-->
+        <div class="chatbot-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message ... " class="message-input" required></textarea>
+                <div class="chatbot-controls">
+                    <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept="images/*" id="file-input" hidden>
+                        <img src="#">
+                        <button type="button" id="file-upload" class="material-symbols-outlined">attach_file_add</button>
+                        <button type="button" id="file-cancel" class="material-symbols-outlined">close</button>
+                    </div>
+                    <button id="send-message" type="submit" class="material-symbols-outlined">arrow_upward</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Linking Emoji Marrt script for emoji picker -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    
+    <!-- Linking custom script -->
+    <script src="./script.js"></script>
+</body>
+</html>
